@@ -7,21 +7,6 @@ class HomeScreen extends StatelessWidget {
   final HomeController controller = Get.put(HomeController());
   HomeScreen({super.key});
 
-  // bool isLoaded = false;
-  // num? temp;
-  // num? press;
-  // num? hum;
-  // num? cover;
-  // String cityname = '';
-  // TextEditingController controller = TextEditingController();
-
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   getCurrentLocation();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:geolocator/geolocator.dart';
@@ -30,7 +31,7 @@ class HomeController extends GetxController {
     if (p != null) {
       getCurrentCityWeather(p);
     } else {
-      print('Data unavailable');
+      log('Data unavailable');
     }
   }
 
@@ -45,7 +46,7 @@ class HomeController extends GetxController {
       updateUI(decodeData);
       isLoaded.value = true; // Use .value to update observable
     } else {
-      print(response.statusCode);
+      log(response.statusCode.toString());
     }
   }
 
@@ -61,7 +62,7 @@ class HomeController extends GetxController {
       updateUI(decodeData);
       isLoaded.value = true; // Use .value to update observable
     } else {
-      print(response.statusCode);
+      log(response.statusCode.toString());
     }
   }
 
